@@ -1,0 +1,37 @@
+
+"""
+Problem: 1
+
+this program will first take number of emails as input and loops through the emails user provide. 
+prints valid if email is valid based on the regex pattern
+"""
+
+import re
+n = int(input("Enter no of mails need to be searched: "))
+for i in range(n):
+    emails = input("Enter email Id: ")
+    pattern = '^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$'
+    if re.search(pattern, emails):
+        print(emails, "is valid")
+    else:
+        print(emails, "is invalid")
+        
+"""
+problem: 2
+This program will take an input from the user after that it goes through the loop and then go it will print the palindrome.
+"""
+n=int(input('enter the number: '))
+for i in range(0,n+1):
+    print(int((((10**i)-1)/9)**2))
+
+"""
+problem: 3
+This program will take the value from the user then it will go through formula it will print the difference between the square of the sum of the n number
+and sum of the squares of n numbers
+"""
+n=int(input('enter a number: '))
+x=(n*(n+1)*(2*n+1))/6
+y=(n*(n+1))/2
+z=y**2
+c=z-x
+print(int(c))
